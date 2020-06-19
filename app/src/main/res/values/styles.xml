@@ -1,0 +1,23 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">#03A9F4</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="ToolbarTheme" parent="ThemeOverlay.MaterialComponents.ActionBar">
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="android:textColorSecondary">@android:color/white</item>
+        <item name="android:background">#03A9F4</item>
+        <item name="elevation">0dp</item>
+    </style>
+
+    <style name="NavigationTheme">
+        <item name="android:background">#4FC3F7</item>
+        <item name="itemTextColor">#FFFF</item>
+        <item name="itemIconTint">#FFFF</item>
+        <item name="elevation">0dp</item>
+    </style>
+</resources>
