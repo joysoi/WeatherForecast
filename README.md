@@ -7,7 +7,7 @@ Future weather available for up to seven days along with weather details for eac
 Optional persistent notifications provided for current location.<br>
 <br>
 <br>
-Used:
+Used:<br>
 • MVVM design pattern.<br>
 • Room persistance library.<br>
 • Retrofit for interacting with RestAPIs.<br>
