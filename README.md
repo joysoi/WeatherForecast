@@ -1,7 +1,7 @@
 # WeatherForecast
 Weather - local weather forecast, weather daily and hourly
 <br><br>
-Overview:
+Overview:<br>
 Presents current and hourly weather for device location or any other location specified by the user.<br>
 Future weather available for up to seven days along with weather details for each day of the week.<br>
 Optional persistent notifications provided for current location.<br>
