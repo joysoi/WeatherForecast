@@ -12,7 +12,7 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 
 const val BASE_URL = "https://api.openweathermap.org/data/2.5/"
-const val API_KEY = ""
+const val API_KEY = "0b728556a369df6ab69eff3dc77eb601"
 
 interface OpenWeatherMapApiService {
     @GET("weather")
