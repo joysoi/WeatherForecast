@@ -12,7 +12,7 @@ Used:<br>
 • Retrofit for interacting with RestAPIs.<br>
 • Coroutines for asynchronous programming and threading.<br>
 • Navigation components, BottomNav, DrawerLayout with SaveArgs interaction.<br>
-• Fused location provider API.<br>
+• Location Services.<br>
 • Connectivity interceptor for checking network availability.<br>
 • Kodein dependency injection library.<br>
 <br>
