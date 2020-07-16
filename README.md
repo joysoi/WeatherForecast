@@ -11,10 +11,10 @@ Used:<br>
 • Room persistance library.<br>
 • Retrofit for interacting with RestAPIs.<br>
 • Coroutines for asynchronous programming and threading.<br>
-• Navigation components, BottomNav, DrawerLayout with SaveArgs interaction.<br>
+• Navigation components, BottomNav, DrawerLayout.<br>
 • Location Services.<br>
-• Connectivity interceptor for checking network availability.<br>
 • Kodein dependency injection library.<br>
+• JUnit, Robolectric, Mockito for Unit and Integration testing.<br>
 <br>
 <br>
 Screens:
