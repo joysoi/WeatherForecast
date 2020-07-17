@@ -23,7 +23,7 @@ import com.example.weatherforecast.data.provider.LocationProvider
 import org.threeten.bp.LocalDateTime
 import org.threeten.bp.ZonedDateTime
 
-const val ONE_CALL_REQUEST_EXCLUDED_CATEGORIES = "daily,minutely"
+const val ONE_CALL_WEATHER_REQUEST_EXCLUDED_CATEGORIES = "daily,minutely"
 
 class ForecastRepositoryImpl(
     private val openWeatherMapNetworkDataSource: OpenWeatherMapNetworkDataSource,
@@ -155,7 +155,7 @@ class ForecastRepositoryImpl(
         oneCallWeatherMapNetworkDataSource.fetchOneCallWeather(
             lat,
             lon,
-            ONE_CALL_REQUEST_EXCLUDED_CATEGORIES,
+            ONE_CALL_WEATHER_REQUEST_EXCLUDED_CATEGORIES,
             UnitSystem.IMPERIAL.name
         )
     }

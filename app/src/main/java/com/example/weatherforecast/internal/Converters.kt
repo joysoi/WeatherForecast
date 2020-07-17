@@ -37,12 +37,13 @@ class Converters {
 
     @TypeConverter
     fun stringToLocalDateTime(str: String?) = str?.let {
-        val formatter: DateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")
+        val formatter: DateTimeFormatter = DateTimeFormatter.ISO_LOCAL_DATE_TIME
             .withZone(ZoneId.of("UTC"))
         LocalDateTime.parse(str, formatter)
     }
 
     @TypeConverter
-    fun localDateTimeToString(dateTime: LocalDateTime?) = dateTime?.format(DateTimeFormatter.ISO_LOCAL_DATE_TIME)
+    fun localDateTimeToString(dateTime: LocalDateTime?) =
+        dateTime?.format(DateTimeFormatter.ISO_LOCAL_DATE_TIME)
 
 }

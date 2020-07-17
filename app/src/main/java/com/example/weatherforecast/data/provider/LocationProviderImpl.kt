@@ -16,7 +16,6 @@ import kotlinx.coroutines.Deferred
 import java.util.*
 import kotlin.math.abs
 
-
 const val USE_DEVICE_LOCATION = "USE_DEVICE_LOCATION"
 const val CUSTOM_LOCATION = "CUSTOM_LOCATION"
 
@@ -26,7 +25,6 @@ class LocationProviderImpl(
 ) : PreferenceProvider(context), LocationProvider {
 
     private val appContext = context.applicationContext
-
 
     override suspend fun hasLocationChanged(currentWeatherResponse: CurrentWeatherResponse): Boolean {
         val deviceLocationChanged = try {
@@ -44,25 +42,24 @@ class LocationProviderImpl(
                     ?: return "${getCustomLocationName()}"
                 val latDevice = deviceLocation.latitude
                 val lonDevice = deviceLocation.longitude
-                return getCityName(latDevice, lonDevice, appContext)
+                return getLocationName(latDevice, lonDevice, appContext)
             } catch (e: LocationPermissionNotGrantedException) {
                 return "${getCustomLocationName()}"
             }
         } else
             return "${getCustomLocationName()}"
-
     }
 
-    private fun getCityName(lat: Double, lon: Double, context: Context): String? {
+    private fun getLocationName(lat: Double, lon: Double, context: Context): String? {
         var cityName: String? = null
         val geocode = Geocoder(context, Locale.getDefault())
         val addressList: List<Address> = geocode.getFromLocation(lat, lon, 1)
         if (!addressList.isNullOrEmpty()) {
             cityName = addressList[0].locality
-            if (!cityName.isNullOrEmpty()) {
-                cityName = addressList[0].locality
+            cityName = if (!cityName.isNullOrEmpty()) {
+                addressList[0].locality
             } else {
-                cityName = addressList[0].adminArea
+                addressList[0].adminArea
             }
         } else {
             Log.d("LocationProvider", "Address list empty")
