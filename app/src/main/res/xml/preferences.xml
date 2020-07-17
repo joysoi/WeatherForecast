@@ -10,7 +10,7 @@
             android:title="Use device location" />
 
         <EditTextPreference
-            android:defaultValue="Boston"
+            android:defaultValue="New York"
             android:dependency="USE_DEVICE_LOCATION"
             android:key="CUSTOM_LOCATION"
             android:summary="The location for which the weather is displayed"
