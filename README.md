@@ -14,7 +14,7 @@ Used:<br>
 • Navigation components, BottomNav, DrawerLayout.<br>
 • Location Services.<br>
 • Kodein dependency injection library.<br>
-• JUnit, Robolectric, Mockito for Unit and Integration testing.<br>
+• AndroidJUnit4 and Hamcrest.<br>
 <br>
 <br>
 Screens:
