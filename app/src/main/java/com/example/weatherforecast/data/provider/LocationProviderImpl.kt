@@ -42,7 +42,7 @@ class LocationProviderImpl(
                     ?: return "${getCustomLocationName()}"
                 val latDevice = deviceLocation.latitude
                 val lonDevice = deviceLocation.longitude
-                return getLocationName(latDevice, lonDevice, appContext)
+                return getCityName(latDevice, lonDevice, appContext)
             } catch (e: LocationPermissionNotGrantedException) {
                 return "${getCustomLocationName()}"
             }
@@ -50,7 +50,7 @@ class LocationProviderImpl(
             return "${getCustomLocationName()}"
     }
 
-    private fun getLocationName(lat: Double, lon: Double, context: Context): String? {
+    private fun getCityName(lat: Double, lon: Double, context: Context): String? {
         var cityName: String? = null
         val geocode = Geocoder(context, Locale.getDefault())
         val addressList: List<Address> = geocode.getFromLocation(lat, lon, 1)
