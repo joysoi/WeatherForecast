@@ -21,10 +21,10 @@ interface FutureWeatherDao {
     @Query("select * from future_weather where time(dtTxt) = time(:date)")
     fun getDetailedWeatherByDate(date: LocalDateTime): LiveData<DetailFutureWeatherItems>
 
-    @Query("select count(id) from future_weather where date(dtTxt) >= date(:startDate)")
+    @Query("select count(id) from future_weather where time(dtTxt) >= time(:startDate)")
     fun countFutureWeather(startDate: LocalDateTime): Int
 
-    @Query("delete from future_weather where date(dtTxt) < date(:firstDateToKeep)")
+    @Query("delete from future_weather where time(dtTxt) < time(:firstDateToKeep)")
     fun deleteOldEntries(firstDateToKeep: LocalDateTime)
 
 }
