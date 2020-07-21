@@ -9,7 +9,7 @@ Optional persistent notifications provided for current location.<br>
 Used:<br>
 • MVVM design pattern.<br>
 • Room persistance library.<br>
-• Retrofit for interacting with RestAPIs.<br>
+• Retrofit for interacting with REST APIs.<br>
 • Coroutines for asynchronous programming and threading.<br>
 • Navigation components, BottomNav, DrawerLayout.<br>
 • Location Services.<br>
