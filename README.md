@@ -14,7 +14,7 @@ Used:<br>
 • Navigation components, BottomNav, DrawerLayout.<br>
 • Location Services.<br>
 • Kodein dependency injection library.<br>
-• AndroidJUnit4 and Hamcrest.<br>
+• JUnit and Hamcrest.<br>
 <br>
 <br>
 Screens:
