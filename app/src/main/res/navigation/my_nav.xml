@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/currentFragment">
+<!--    app:startDestination="@id/currentFragment">-->
+
+<!--    <fragment-->
+<!--        android:id="@+id/currentFragment"-->
+<!--        android:name="com.example.gradientweathertestapp.ui.weather.current.CurrentFragment"-->
+<!--        android:label="current_fragment"-->
+<!--        tools:layout="@layout/current_fragment" />-->
+<!--    <fragment-->
+<!--        android:id="@+id/futureFragment"-->
+<!--        android:name="com.example.gradientweathertestapp.ui.weather.future.list.FutureFragment"-->
+<!--        android:label="future_fragment"-->
+<!--        tools:layout="@layout/future_fragment" >-->
+<!--        <action-->
+<!--            android:id="@+id/actionDetail"-->
+<!--            app:destination="@id/futureDetailWeatherFragment" />-->
+<!--    </fragment>-->
+<!--    <fragment-->
+<!--        android:id="@+id/settingsFragment"-->
+<!--        android:name="com.example.gradientweathertestapp.ui.settings.SettingsFragment"-->
+<!--        android:label="SettingsFragment" />-->
+<!--    <fragment-->
+<!--        android:id="@+id/futureDetailWeatherFragment"-->
+<!--        android:name="com.example.gradientweathertestapp.ui.weather.future.detail.FutureDetailWeatherFragment"-->
+<!--        android:label="FutureDetailWeatherFragment" >-->
+<!--        <argument-->
+<!--            android:name="dateString"-->
+<!--            app:argType="org.threeten.bp.LocalDateTime" />-->
+<!--    </fragment>-->
+
+    <fragment
+        android:id="@+id/currentFragment"
+        android:name="com.example.weatherforecast.ui.weather.current.CurrentFragment"
+        android:label="current_fragment"
+        tools:layout="@layout/current_fragment" />
+    <fragment
+        android:id="@+id/futureListFragment"
+        android:name="com.example.weatherforecast.ui.weather.future.list.FutureListFragment"
+        android:label="future_list_fragment"
+        tools:layout="@layout/future_list_fragment" >
+        <action
+            android:id="@+id/actionDetail"
+            app:destination="@id/futureDetailWeatherFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/futureDetailWeatherFragment"
+        android:name="com.example.weatherforecast.ui.weather.future.detail.FutureDetailWeatherFragment"
+        android:label="future_detail_weather_fragment"
+        tools:layout="@layout/future_detail_weather_fragment" >
+        <argument
+            android:name="dateString"
+            app:argType="org.threeten.bp.LocalDateTime" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.weatherforecast.ui.settings.SettingsFragment"
+        android:label="SettingsFragment" />
+</navigation>

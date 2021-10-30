@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="Weather Location">
+        <SwitchPreference
+            android:defaultValue="true"
+            android:disableDependentsState="true"
+            android:key="USE_DEVICE_LOCATION"
+            android:summary="Allow the app to get your location"
+            android:title="Use device location" />
+
+        <EditTextPreference
+            android:defaultValue="New York"
+            android:dependency="USE_DEVICE_LOCATION"
+            android:key="CUSTOM_LOCATION"
+            android:summary="The location for which the weather is displayed"
+            android:title="Location" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Units">
+        <ListPreference
+            android:defaultValue="IMPERIAL"
+            android:entries="@array/unitSystemEntries"
+            android:entryValues="@array/unitSystemValues"
+            android:summary="%s"
+            android:key="UNIT_SYSTEM"
+            android:title="Unit system" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Notifications">
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="USE_WEATHER_NOTIFICATIONS"
+            android:title="Weather notifications"
+            android:summary="Allow weather notifications for current location"
+            />
+    </PreferenceCategory>
+</PreferenceScreen>
